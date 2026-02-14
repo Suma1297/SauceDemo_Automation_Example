@@ -46,14 +46,14 @@ public class GoogleTest {
         driver.findElement(By.className("shopping_cart_link")).click();
 
 
-        // 7. Click Checkout
+        // 6. Click Checkout
         //driver.findElement(By.id("checkout")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout"))).click();
 
 
-        // 8. Enter Checkout Information
+        // 7. Enter Checkout Information
         driver.findElement(By.id("first-name")).sendKeys("Suma");
         driver.findElement(By.id("last-name")).sendKeys("Tester");
         driver.findElement(By.id("postal-code")).sendKeys("560001");
@@ -70,13 +70,13 @@ public class GoogleTest {
 
         driver.findElement(By.id("continue")).click();
 
-        // 9. Payment Overview Page
+        // 8. Payment Overview Page
         System.out.println("Payment Summary Displayed");
 
-        // 10. Finish Order
+        // 9. Finish Order
         driver.findElement(By.id("finish")).click();
 
-        // 11. Order Confirmation
+        // 10. Order Confirmation
         String confirmation =
                 driver.findElement(By.className("complete-header")).getText();
 
